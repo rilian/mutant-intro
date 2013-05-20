@@ -7,7 +7,7 @@ module Libclub
     end
 
     def books_count
-      boks.length
+      books.length
     end
 
     def borrow(book)
