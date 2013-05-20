@@ -11,19 +11,19 @@ module Libclub
     end
 
     def borrow(book)
-      if book.owner.books_owned.include?(book)
+      unless book.owner.books_lent.include?(book)
         book.owner.books_lent << book
         books_borrowed << book
       end
     end
 
-  private
+    private
 
     def initialize(name)
-      @name           = name.to_s
-      @books_owned    = []
+      @name = name.to_s
+      @books_owned = []
       @books_borrowed = []
-      @books_lent     = []
+      @books_lent = []
     end
   end
 end
