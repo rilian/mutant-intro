@@ -1,6 +1,6 @@
 module Libclub
   class Reader
-    attr_accessor :books_owned, :books_borrowed, :books_lent
+    attr_accessor :books_owned, :books_borrowed, :books_lent, :name
 
     def books
       books_owned - books_lent + books_borrowed
